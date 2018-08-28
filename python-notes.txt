@@ -1,0 +1,17 @@
+python is case-sensitive
+
+there are 33 keywords:
+
+
+vedio 5 :
+=========
+
+14 datatypes:
+-------------
+
+
+inbuilt methods:
+----------------
+print()
+type()
+id()
