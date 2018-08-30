@@ -3,12 +3,31 @@ python is dynamically typed langauge
 
 there are 33 keywords:
 
+>>import keyword
+>>> print(keyword.kwlist)
+
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
 
 vedio 5 :
 =========
 
 14 datatypes:
 -------------
+int
+float
+complex
+bool
+str
+bytes
+bytearray
+range
+list
+tuple
+set
+frozenset
+dict
+None
 
 All datatypes are object
 we can use id() method to print the object address of the datatype variable passed.
@@ -28,3 +47,279 @@ there are 4 forms to reperesent int datatype
 	- hexa (base 16 - 0 to 9, a to f or A to F - 0xFace or 0XFace) 
 
 Note: for any form (binary, octal, hexa), python will give output only in decimal form
+
+
+
+
+vedio 6 :
+==================
+
+recap: basics, features, identifiers, all datatypes, int datatype
+
+Note:
+there is not size or range in python like other languages.
+we can give x=9999999999999999999999999999999 
+type(x) will give int
+
+there is no concept of size or range in python, reason is:
+in java: int x = 10;
+so, here x is primitive type and any primitive type will have size and range
+
+same in java: Student s = new Student;
+Now, s is referencing to Student object in memory, so inside student object there could many memory space used, which is variable in nature. And there is size defined exactly for this object in java. So for object there is no size or range.
+
+*** Now in python everything is an object. so in pyhton there is no concept of size, range , min or max. All datatypes are object. ***
+
+
+Base conversions:
+To convert one base form to another base form.
+bin() - from any base to binary
+oct() - from any base to octal
+hex() - from any base to hexa
+
+>> x=10
+>> bin(x)
+>> bin(15)
+>> bin(0o777)
+>> 
+>> oct(786) 786 is decimal
+>> oct(0XFace)
+>> oct(0B11111)
+
+>> hex(10)
+'0xa'
+
+>> hex(16789)
+'0x4195'
+
+float data type: number with decimal point
+----------------
+
+salary: 2345.67
+desiel price: 65.25
+
+>> f=123.456
+>> type(f)
+
+>> f=0X123.456
+>> f=0o123.456
+Here, python will throw error, because float point type with octal or hexa or binary is not suppported.
+
+So, in python for float only decimal (base 10) is supported. no support for base6, base8 or base16 like in int datatype.
+
+one more point: 
+Exponentail form ==> 1.2e3
+i.e., 1.2 * 10 pow 3
+i.e., 1.2 * 1000
+i.e., 1200
+
+this support is there in float. we represent exponentail form in float
+
+>> f=1.2e3
+>> 1200.0
+
+hint: the decimal point shifted 3 times towards right. 1.2 * 1000 = 1200.0
+
+for bigger exponentail like:
+>> f=1.2e100
+>> print(f)
+1.2e+100
+
+in python it is easier to represent bigger values
+
+
+
+complex data type:
+------------------
+
+a+bj
+
+a is called Real part
+b is called Imaginary part
+
+what is the value of j ? 
+j^2 = -1
+in mathematics it is, j = √-1 .... hint shortcut key on mac for square root alt+V
+
+to develop mathematics based program/appliaction/scentific , python is best
+
+here, a and b can int value or float value
+
+x=10+20j
+x
+(10+20j)
+type(x)
+complex
+
+y=10.5+2.3j
+j
+error : name j is not defind
+
+>> y
+(10.5+2.3j)
+
+Now, do we need compulsaory use 'j' only in the expression
+
+>> x=10+20i
+syntaxError: invalid syntax
+
+>> x=10+20j
+
+So, only 'j' is allowed. it is been designed in that way.
+by default in python only j is expected.
+
+x=10+j20
+error
+
+j should be after the number/variable
+
+
+in real part, if we use int value we can use bi, oct or hexa form also
+in imaginary part, only decimal (base 10) is allowed
+
+a=0B1111+20j
+valid
+
+a=15+0B1111j
+synax error: invalid
+
+a=10+20j
+b=20+30j
+a+b
+(30+50j)
+a-b
+(-10-10j)
+
+a*b (something is happening dont worry for now)
+
+a=10+20j
+Now how to the real part number?
+a.real
+10.0
+a.imag
+20.0    (value is stored in float type)
+
+complex datatype has inbuilt attribute for represent real and imaginary parts
+
+
+bool data type: 
+---------------
+
+logical type, True or False
+
+T and F are upper case
+
+b=True
+type(b)
+bool
+
+a=10
+b=20
+c=a<b
+c
+True
+
+True+True ==> 2
+True+False ==> 1
+
+internally at memory level True is treated as 1 and False as 0.
+
+
+str datatype: sequence of characters
+-------------
+
+s='manju'
+or
+s="manju"
+s
+manju
+type(s)
+str
+
+here we can use single qoute or double qoute. Convention is single qoute but java developer will do in double qoute. bith are fine.
+
+but if you in double qoute, python will take it in single qoute only
+>> s="manju"
+>> s
+'manju'
+
+Example:
+
+"manju
+	software"
+
+This is valid are not.
+python will give left and right because the above example has multi line string literal. There are 2 lines.
+
+so to represent multiline string literal we have to enclose in three single qoute or three double qoute.
+
+'''manju
+		software'''
+
+or
+
+"""manju
+	software"""		
+
+to do same in java, we have to use '/n' in the middle of the string.
+
+
+Now how to print:
+Manju Sir "Python" classes are helpful
+
+in above example Python is enclosed with double qoutes.
+so, we can now enclose whole string in three single are double quotes.
+and the double qoute inside the string will never be treated as endind string (as in java).
+So, in python there will be no question/problem of escape sequence characters.
+
+s='''Manju Sir "Python" classes are helpful'''
+s
+'Manju Sir "Python" classes are helpful'
+
+
+slice operator: slice is one piece
+--------------
+
+this applicable for string, for any collections.
+
+s="Manju software solutions"
+s[2:8]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
