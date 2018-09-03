@@ -288,6 +288,261 @@ s[2:8]
 
 
 
+vedio 7:
+=================
+
+Recap of datatypes:
+
+True/True ==> 1.0
+True/False ===> zero division error
+
+Str:
+
+there is no char type in python, we should use str only for char.
+
+Slice Operator: it is a piece. it is substring
+---------------
+
+slice is most commonly used. slice is used for string and collection also.
+s='manju'
+we need to access by index
+index will always starts with 0 (zero) only
+
+ _ _ _ _ _
+|m|a|n|j|u|
+ - - - - -
+ 0 1 2 3 4   ==> index
+
+ s[0]
+ 'm'
+
+ s[3]
+ n
+
+ there is specality in python in index. +ve index and -ve index
+
+ +ve index right to left - 0 to 4
+ -ve index left to right -1 to -5
+
+-5  -4  -3 -2 -1   ==> -ve index
+  _  _  _  _  _
+| m| a| n| j| u|
+  -  -  -  -  -
+ 0  1  2  3   4   ==> +ve index
+
+
+s[-1]
+u
+
+s[-5]
+m
+
+for List also same concept is applicable.
+
+substring
+---------
+s[begin:end]
+returns substring from begin index to end-1 index
+end index is exclusive
+
+s[1:4]
+'anj'
+
+s[2:4]
+'nj'
+
+s[1:]
+anju
+here, end is by default is end of the index.
+end is optional
+
+s[3:]
+'ju'
+
+s[:4]
+'manj'
+now begin is start of index is 0.
+so begin is also optional.
+
+s[:]
+'manju'
+we didnt specify begin or end. it will return whole string
+
+
+s[-1:-4]
+''
+
+we get empty because begin value should be lower and end value should be higher.
+
+s[-4:-1]
+'anj'
+
+
+s[1:100]
+'anju'
+now end index is higher and not there, in this case it will consider end index has end.
+And it won't throw any error.
+
+
+s[begin:end:step]
+step is jump
+by default step is 1 and it jumps by 1 char at a time
+
+>>> s='manjusoftwaresolutions'
+>>> s[1:10]
+'anjusoftw'
+
+>>> s[1:10:2]
+'ajsfw'
+
+here, step is 2, char are extracted by jumping by 2
+
+s='manju'
+
+now how can i get 'manju' 10 times
+like manjumanjumanju.....
+
+how this can be achieved in other languages like java... in loops we need to concat 10 times
+
+
+In python it is just.... s*10
+here * is repeatation operator
+10 is how many times in need to repeat
+
+
+This are great flexiblity in python.
+
+
+recap:
+str
+index
+slice
+*
+len(s) - this gives length of string s.
+
+Note:
+All the datatypes that we have covered is immutable. for now we will keep this point later we will revisit.
+
+datatype:
+---------
+
+int
+float
+complex
+bool
+str
+
+1. the above 5 datatypes are called as Python's fundamental data types
+
+2. even char values are str type only
+
+3. long is not available in python 3. even long is supported as int type only
+
+
+
+Type Casting:  (Or Type coersion)
+-------------
+
+int to float
+float to int
+int to str
+str to int
+
+any kind of convertion, how can we do this and what are the methods.
+
+
+Python has inbuilt function to convert one type to another type:
+
+int()
+float()
+complex()
+bool()
+str()
+
+int():
+------
+
+to convert any other type to int type
+
+int(123.456)
+123
+
+int(10+20j)
+we can't do this, complex can't to be converted to int
+TypeError: can't convert complex to int
+
+int(True)
+1
+
+int(False)
+0
+
+int("10")
+10
+
+int("10.5")
+not possible, only int value should represented in the string
+two point:
+	- string value should be int 
+	- and the value should be in base 10
+ValueError: invalid literal for int() with base 10: '10.5'
+
+
+int("0B1111")
+ValueError: invalid literal for int() with base 10: '0B1111'
+
+value should be in decimal only
+
+
+float():
+---------
+
+float(10)
+10.0
+
+float(10+20j)
+TypeError
+
+float(True)
+1.0
+
+float(False)
+0.0
+
+float("10")
+10.0
+
+float("10.5")
+10.5
+
+float("then")
+valueError: couldn't convert
+
+float("0b1111")
+valueError:
+only base 10 is supported
+
+we can covert any type to float except complex
+
+
+
+Vedio 8:
+=================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
