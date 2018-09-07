@@ -1,0 +1,48 @@
+DAY ONE:
+--------
+
+Q: good evening sir
+
+Q: Durga Sir... i had requested different time... morning batch
+
+Q: Do we deploy the sample web application on amazon or any cloud ?
+
+Q: on daily basis we will get vedio sir
+
+Q: this time wont work for me ... because i will have evening calls .... so will we get recording on daily basis
+
+Q: yes
+
+Audience Question
+Q: for getting job in Python how many month is required?
+A: 1. Language Fundamentals
+ 2. Operators
+ 3. Input and Output Statements
+ 4. Flow Control
+ 5. String concept
+ 6. List Data Structure
+ 7. Tuple Data Structure
+ 8. Set Data Structure
+ 9. Dictionary Data Structure
+ 10. Functions
+ 11. Modules
+ 12. Packages
+ 
+ 13. OOPs
+ 14. Exception Handling
+ 15. File Handling
+ 16. Python Database Connectivity(PDBC)
+ 17. Regular Expressions
+ 18. Web Scraping
+ 19. MultiThreading
+ 20. Decorators
+ 21. Generators
+ 22. logging module
+
+Audience Question
+Q: okk
+
+durgasoftonlinetraining@gmail.com
+ 8885252627
+
+
